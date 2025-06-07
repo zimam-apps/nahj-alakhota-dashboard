@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "kufam";
+  src: local("kufam"), 
+    url("kufam/Kufam-Regular.ttf") format("truetype"),
+    url("kufam/Kufam-Medium.ttf") format("truetype"),
+    url("kufam/Kufam-SemiBold.ttf") format("truetype"),
+    url("kufam/Kufam-Bold.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
