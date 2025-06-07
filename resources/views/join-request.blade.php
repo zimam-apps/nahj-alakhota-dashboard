@@ -126,17 +126,15 @@
                 قدّم طلبك الآن
             </h1>
 
-            <p class="text-gray-600 mb-8 text-center">
+            <p class="text-gray-600 text-center">
                 املأ النموذج أدناه ليتم مراجعة طلبك والانضمام إلى فريقنا لخدمة ضيوف
                 الرحمن.
             </p>
 
-
-
             <form id="applicationForm" action="{{ route('join-request.store') }}" method="POST" enctype="multipart/form-data" class="space-y-8 w-full">
                 @csrf
                 <!-- الاسم الثلاثي -->
-                <div>
+                <div style="margin: 0">
                     <input
                             type="text"
                             id="name"
