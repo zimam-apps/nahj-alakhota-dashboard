@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body>
+<body style="background: url({{url('/')}}/assets/images/noise.svg),linear-gradient(182.86deg, #ffffff 6.06%, #715353 97.62%);">
 <header class="fixed left-0 right-0 z-20 top-0 px-4 h-[80px] md:h-[100px] sm:px-14 lg:px-20">
     <div class="container-fluid h-full mx-auto py-3">
         <div class="flex items-center h-full justify-between">

@@ -1345,18 +1345,6 @@ header .list-button.close .bars {
 
 /* hero section */
 
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: end;
-  background: linear-gradient(
-      170.3deg,
-      rgba(109, 71, 48, 0.5) -35.98%,
-      #090300 104.41%
-    ),
-    url(/assets/images/hero-banner.png);
-}
-
 .hero-section .text-content {
   max-width: 780px;
 }
@@ -1370,13 +1358,6 @@ header .list-button.close .bars {
 }
 
 /* about section */
-
-.about-section,
-.join-section,
-.contribution-section {
-  background: url("/assets/images/noise.svg"),
-    linear-gradient(182.86deg, #ffffff 6.06%, #715353 97.62%);
-}
 
 .about-section img,
 .join-section img,
@@ -1393,12 +1374,6 @@ header .list-button.close .bars {
 }
 
 /* goals section */
-
-.goals-section,
-.conditions-section,
-.faqs-section {
-  background: url("/assets/images/noise.svg");
-}
 
 .faqs-section .faq-card .accordionContent {
   max-width: calc(100% - 50px);

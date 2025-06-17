@@ -1,5 +1,6 @@
 
 // hero section
+const baseUrl = document.querySelector("head base").href;
 const heroConfig = {
   title: "منصة تدريب العاملين في مشروع على خطاه في مسار الهجرة النبوية",
   description: `منصة إلكترونية متكاملة تهدف إلى تأهيل العاملين في مشروع "على
@@ -12,7 +13,7 @@ const heroConfig = {
     const partnersContainer = document.querySelector(".hero-partners");
     this.partners.forEach((img) => {
       const image = new Image();
-      image.src = `/assets/images/${img}`;
+      image.src = baseUrl+`/assets/images/${img}`;
       image.alt = "شعار شريك";
       image.loading = "lazy";
       partnersContainer.appendChild(image);
@@ -24,7 +25,7 @@ const aboutConfig = {
   title: "''على خُطاه'' هو مشروع وطني رائد في المملكة العربية السعودية",
   description: `هو مشروع طموح يهدف إلى استعادة وتطوير المواقع التاريخية التي تشهد
                 على رحلة الهجرة النبوية من مكة إلى المدينة.`,
-  bannerImage: "assets/images/about-banner.png",
+  bannerImage: baseUrl+"assets/images/about-banner.png",
   init: function () {
     document.querySelector(".about-title").textContent = this.title;
     document.querySelector(".about-richText").textContent = this.description;
@@ -109,7 +110,7 @@ const contributionConfig = {
                 العاملين في مشروع على خطاه، من مرشدين، ومقدّمي خدمات، وموظفين
                 إداريين. تشمل المنصة جميع مراحل التدريب بدءًا من الاستقطاب،
                 التسجيل، التدريب النظري، الترشيح، وحتى توقيع العقود.`,
-  bannerImage: "assets/images/contribution-banner.png",
+  bannerImage: baseUrl+"assets/images/contribution-banner.png",
   init: function () {
     // Set text content
     document.querySelector(".contribution-title").textContent = this.title;
@@ -237,7 +238,7 @@ const joinConfig = {
                 العاملين في مشروع على خطاه، من مرشدين، ومقدّمي خدمات، وموظفين
                 إداريين. تشمل المنصة جميع مراحل التدريب بدءًا من الاستقطاب،
                 التسجيل، التدريب النظري، الترشيح، وحتى توقيع العقود.`,
-  bannerImage: "assets/images/join-banner.png",
+  bannerImage: baseUrl+"assets/images/join-banner.png",
   init: function () {
     // Set text content
     document.querySelector(".join-title").textContent = this.title;

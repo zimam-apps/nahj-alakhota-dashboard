@@ -2,11 +2,38 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <base href="{{url('/')}}">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="{{url('/')}}/assets/images/logo.ico" type="image/x-icon">
     <title>الرئيسية</title>
     <link href="{{url('/')}}/assets/css/main.css" rel="stylesheet"/>
+    <style>
+        .about-section,
+        .join-section,
+        .contribution-section {
+            background: url("{{url('/')}}/assets/images/noise.svg"),
+            linear-gradient(182.86deg, #ffffff 6.06%, #715353 97.62%);
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: end;
+            background: linear-gradient(
+                    170.3deg,
+                    rgba(109, 71, 48, 0.5) -35.98%,
+                    #090300 104.41%
+            ),
+            url({{url('/')}}/assets/images/hero-banner.png);
+        }
+
+        .goals-section,
+        .conditions-section,
+        .faqs-section {
+            background: url("{{url('/')}}/assets/images/noise.svg");
+        }
+    </style>
 </head>
 
 <body>
@@ -75,7 +102,7 @@
 <!-- content -->
 <main class="relative w-100">
     <!-- hero section -->
-    <section class="hero-section relative z-10 bg-[#A9C6BC]">
+    <section class="hero-section relative z-10 bg-[#A9C6BC]" style="background: linear-gradient(170.3deg,rgba(109, 71, 48, 0.5) -35.98%,#090300 104.41%),url({{url('/')}}/assets/images/hero-banner.png)">
         <div class="container">
             <div class="flex flex-col items-center space-y-16 lg:flex-row lg:justify-between lg:items-end pb-20">
                 <!-- Text content -->
