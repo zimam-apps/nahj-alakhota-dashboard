@@ -42,9 +42,6 @@
         <div class="flex items-center h-full justify-between">
             <!-- Logo -->
             <div class="flex items-center">
-                <a href="/">
-                    <img src="{{url('/')}}/assets/images/logo.svg" alt="site logo" class="object-contain"/>
-                </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -64,10 +61,6 @@
             <!-- Desktop Navigation -->
             <nav data-v-c970699f="" class="header-nav hidden md:flex gap-x-6 space-x-reverse"></nav>
             <div class="hidden md:flex gap-2">
-                <a href="#" class="block py-2 btn-secondary rounded-full px-5 text-primary transition duration-300">
-                    تسجيل الدخول
-                </a>
-
                 <a href="{{route('join-request')}}" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
                     تقديم طلب الإنضمام
                 </a>
@@ -87,10 +80,6 @@
                 <!--  -->
                 <div class="py-4"></div>
                 <div class="flex flex-wrap gap-2">
-                    <a href="#" class="block py-2 btn-secondary rounded-full px-5 text-primary transition duration-300">
-                        تسجيل الدخول
-                    </a>
-
                     <a href="{{route('join-request')}}" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
                         تقديم طلب الإنضمام
                     </a>
@@ -386,7 +375,6 @@
 <footer data-v-19b56bd5="" class="py-8 bg-[#170F0A] border relative z-10">
     <div class="mx-0 space-y-12 pt-6">
         <div class="block flex justify-center">
-            <img src="{{url('/')}}/assets/images/logo.svg" width="120" alt="site-logo"/>
         </div>
         <div class="flex justify-center">
             <nav class="flex justify-around flex-wrap gap-y-5 gap-x-3 md:gap-x-8">

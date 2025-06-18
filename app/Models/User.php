@@ -2,14 +2,11 @@
 
 namespace App\Models;
 
-use Filament\Models\Contracts\FilamentUser;
-use Filament\Models\Contracts\HasName;
-use Filament\Panel;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable implements FilamentUser, HasName
+class User extends Authenticatable
 {
     use Notifiable;
 
@@ -1006,14 +1003,4 @@ class User extends Authenticatable implements FilamentUser, HasName
             $bundleWebinar->where('bundle_id' , $bundle_id)->where('webinar_id' , $webinar_id);
         })->exists();
     }
-
-	public function canAccessPanel(Panel $panel): bool
-	{
-		return $this->role_name == 'admin';
-	}
-
-	public function getFilamentName(): string
-	{
-		return $this->full_name;
-	}
 }

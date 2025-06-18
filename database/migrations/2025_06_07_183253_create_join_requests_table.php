@@ -20,7 +20,7 @@ return new class extends Migration {
 			$table->string('education')->nullable();
 			$table->json('languages')->nullable();
 			$table->string('personal_id_image')->nullable();
-			$table->string('cv_file');
+			$table->string('cv_file')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

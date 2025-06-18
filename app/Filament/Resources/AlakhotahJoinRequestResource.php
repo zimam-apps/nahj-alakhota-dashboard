@@ -14,6 +14,7 @@ use Filament\Infolists;
 use Filament\Infolists\Infolist;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Storage;
 
 class AlakhotahJoinRequestResource extends Resource
 {
@@ -81,10 +82,11 @@ class AlakhotahJoinRequestResource extends Resource
 	                ->columns()
                     ->schema([
                         Infolists\Components\ImageEntry::make('personal_id_image')
+	                        ->disk('digitalocean')
                             ->label('صورة الهوية الشخصية'),
                         Infolists\Components\TextEntry::make('cv_file')
                             ->label('السيرة الذاتية')
-                            ->url(fn ($record) => $record->cv_file ? asset('storage/' . $record->cv_file) : null)
+                            ->url(fn ($record) => $record->cv_file ? Storage::disk('digitalocean')->url($record->cv_file) : null)
                             ->openUrlInNewTab(),
                     ]),
             ]);

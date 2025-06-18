@@ -32,4 +32,20 @@ return [
     // Indicators
     'submitted_from_text' => 'Submitted from',
     'submitted_until_text' => 'Submitted until',
+
+	// Widgets
+	'total_join_requests' => 'Total Join Requests',
+	'all_time_join_requests' => 'All Time Join Requests',
+	'this_month' => 'This Month',
+	'join_requests_this_month' => 'Join Requests This Month',
+	'gender_distribution' => 'Gender Distribution',
+	'male' => 'Male',
+	'female' => 'Female',
+	'male_and_female_applicants' => 'Male and female Applicants',
+	'join_requests_by_city' => 'Join Requests by City',
+	'join_requests_by_education' => 'Join Requests by Education Level',
+	'join_requests_by_gender' => 'Join Requests By Gender',
+	'join_requests_over_time' => 'Join Requests Over Time',
+	'number_of_requests' => 'Number of Requests',
+	'other_not_specified' => 'Other/Not Specified',
 ];

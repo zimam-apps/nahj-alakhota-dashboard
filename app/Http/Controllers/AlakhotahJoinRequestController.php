@@ -12,12 +12,12 @@ class AlakhotahJoinRequestController extends Controller
 		$validatedData = $request->validated();
 
 		if ($request->hasFile('personal_id_image')) {
-			$personalIdImagePath = $request->file('personal_id_image')->store('personal-id-images', 'public');
+			$personalIdImagePath = $request->file('personal_id_image')->store('personal-id-images');
 			$validatedData['personal_id_image'] = $personalIdImagePath;
 		}
 
 		if ($request->hasFile('cv_file')) {
-			$cvFilePath = $request->file('cv_file')->store('cv-files', 'public');
+			$cvFilePath = $request->file('cv_file')->store('cv-files');
 			$validatedData['cv_file'] = $cvFilePath;
 		} else {
 			$validatedData['cv_file'] = null;
