@@ -18,8 +18,8 @@ const headerConfig = {
     this.menuItems.forEach((item) => {
       const anchor = document.createElement("a");
       anchor.href =
-        window.location.pathname == "/join-request.html"
-          ? `/index.html${item.to}`
+        window.location.pathname.includes("/join-request")
+          ? `/${item.to}`
           : item.to; //item.to;
       anchor.textContent = item.label;
       nav.appendChild(anchor);
@@ -27,7 +27,11 @@ const headerConfig = {
 
     this.menuItems.forEach((item) => {
       const newItem = listItem.cloneNode(true);
-      newItem.setAttribute("href", `/index.html${item.to}`);
+      newItem.setAttribute("href", 
+        window.location.pathname.includes("/join-request")
+          ? `/${item.to}`
+          : item.to
+      );
       newItem.querySelector("span").innerText = item.label;
       mobileNav.prepend(newItem);
     });

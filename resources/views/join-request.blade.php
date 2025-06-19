@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="{{url('/')}}/assets/images/logo.ico" type="image/x-icon"/>
-    <title>تقديم طلب الإنضمام</title>
-    <link href="{{url('/')}}/assets/css/main.css" rel="stylesheet"/>
-    <link href="{{url('/')}}/assets/css/join-request.css" rel="stylesheet"/>
-    <!-- Toastify CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <style>
+<x-layout>
+    <x-slot name="title">تقديم طلب الإنضمام</x-slot>
+
+    <x-slot name="styles">
+        <link href="{{url('/')}}/assets/css/join-request.css" rel="stylesheet"/>
+        <!-- Toastify CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    </x-slot>
+
+    <x-slot name="additionalStyles">
         @keyframes slide-right {
             0% {
                 transform: translateX(100%);
@@ -28,82 +26,11 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             font-family: inherit;
         }
-    </style>
-</head>
+    </x-slot>
 
-<body style="background: url({{url('/')}}/assets/images/noise.svg),linear-gradient(182.86deg, #ffffff 6.06%, #715353 97.62%);">
-<header class="fixed left-0 right-0 z-20 top-0 px-4 h-[80px] md:h-[100px] sm:px-14 lg:px-20">
-    <div class="container-fluid h-full mx-auto py-3">
-        <div class="flex items-center h-full justify-between">
-            <!-- Logo -->
-            <div class="flex items-center">
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <!-- @click="toggleMenu" -->
-            <button class="list-button md:hidden text-gray-700 focus:outline-none">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#222"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="x-mark"
-                >
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-
-                <svg
-                        class="w-6 h-6 bars"
-                        fill="none"
-                        stroke="#222"
-                        viewBox="0 0 24 24"
-                >
-                    <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                    ></path>
-                </svg>
-            </button>
-
-            <nav data-v-c970699f=""
-                    class="header-nav hidden md:flex gap-x-6 space-x-reverse"
-            ></nav>
-            <div class="hidden md:flex gap-2">
-                <a href="javascript:" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
-                    تقديم طلب الإنضمام
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="fadeOut mobileNav md:hidden fixed w-full left-0 top-[50px] px-3 pt-6">
-            <div class="relative h-full rounded-xl bg-[#422b1d]/80 border-2 border-primary p-5 flex items-center justify-center flex-col">
-                <div class="nav-container flex items-center justify-center flex-col">
-                    <a href="/about" class="list_item text-lg block py-2 text-primary transition duration-300">
-                        <span class="block hover:-translate-x-1 transition"></span>
-                    </a>
-                </div>
-                <!--  -->
-                <div class="py-4"></div>
-                <div class="flex flex-wrap gap-2">
-                    <a href="javascript:" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
-                        تقديم طلب الإنضمام
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- content -->
-<main class="relative w-100">
+    <x-slot name="bodyAttributes">
+        style="background: url({{url('/')}}/assets/images/noise.svg),linear-gradient(182.86deg, #ffffff 6.06%, #715353 97.62%);"
+    </x-slot>
     <div class="py-8"></div>
     <section class="py-20 w-full flex justify-center relative">
         <div class="form-container p-6 md:p-8">
@@ -392,103 +319,81 @@
             <img src="{{url('/')}}/assets/images/join-banner.png" alt="" class="w-full"/>
         </div>
     </section>
-</main>
-<!-- footer -->
-<footer data-v-19b56bd5="" class="py-8 bg-[#170F0A] border relative z-10">
-    <div class="mx-0 space-y-12 pt-6">
-        <div class="block flex justify-center">
-        </div>
-        <div class="flex justify-center">
-            <nav class="flex justify-around flex-wrap gap-y-5 gap-x-3 md:gap-x-8">
-                <a aria-current="page" href="/" class="router-link-active router-link-exact-active hover:underline text-white font-medium">عن على خطاه</a>
-                <a aria-current="page" href="/" class="router-link-active router-link-exact-active hover:underline text-white font-medium">أهدااف المنصة</a>
-                <a aria-current="page" href="/" class="router-link-active router-link-exact-active hover:underline text-white font-medium">الأسئلة الشائعة</a>
-                <a aria-current="page" href="/" class="router-link-active router-link-exact-active hover:underline text-white font-medium">الشروط والمتطلبات</a>
-                <a aria-current="page" href="/" class="router-link-active router-link-exact-active hover:underline text-white font-medium">مساهمتنا</a>
-            </nav>
-        </div>
-        <br/>
-        <div class="block">
-            <p class="text-white text-center mb-5">
-                جميع الحقوق محفوظة لشركة صلة © 2025
-            </p>
-        </div>
-    </div>
-</footer>
-<script src="{{url('/')}}/assets/js/header.js"></script>
-<script src="{{url('/')}}/assets/js/join-form.js"></script>
-<!-- Toastify JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <x-slot name="scripts">
+        <script src="{{url('/')}}/assets/js/header.js"></script>
+        <script src="{{url('/')}}/assets/js/join-form.js"></script>
+        <!-- Toastify JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-@if(session('success'))
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        Toastify({
-            text: `<div class="flex items-center">
-                    <span>{{ session('success') }}</span>
-                  </div>`,
-            duration: 5000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            backgroundColor: "linear-gradient(to right, #c8bd99, #8a7e5a)",
-            className: "success-toast",
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            escapeMarkup: false, // Allows HTML in the toast
-            style: {
-                background: "linear-gradient(to right, #c8bd99, #8a7e5a)",
-                borderRadius: "8px",
-                boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
-                padding: "12px 20px",
-                fontSize: "16px",
-                fontWeight: "bold",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                direction: "rtl",
-                animation: "slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
-            }
-        }).showToast();
-    });
-</script>
-@endif
+        @if(session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Toastify({
+                    text: `<div class="flex items-center">
+                            <span>{{ session('success') }}</span>
+                          </div>`,
+                    duration: 5000,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    backgroundColor: "linear-gradient(to right, #c8bd99, #8a7e5a)",
+                    className: "success-toast",
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    escapeMarkup: false, // Allows HTML in the toast
+                    style: {
+                        background: "linear-gradient(to right, #c8bd99, #8a7e5a)",
+                        borderRadius: "8px",
+                        boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+                        padding: "12px 20px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        direction: "rtl",
+                        animation: "slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
+                    }
+                }).showToast();
+            });
+        </script>
+        @endif
 
-@if($errors->any())
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        @foreach($errors->all() as $error)
-            Toastify({
-                text: `<div class="flex items-center">
-                        <span>{{ $error }}</span>
-                        <svg class="w-6 h-6 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                        </svg>
-                      </div>`,
-                duration: 5000,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "center", // `left`, `center` or `right`
-                backgroundColor: "linear-gradient(to right, #e53e3e, #c53030)",
-                className: "error-toast",
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                escapeMarkup: false, // Allows HTML in the toast
-                style: {
-                    background: "linear-gradient(to right, #e53e3e, #c53030)",
-                    borderRadius: "8px",
-                    boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
-                    padding: "12px 20px",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    direction: "rtl",
-                    animation: "slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
-                }
-            }).showToast();
-        @endforeach
-    });
-</script>
-@endif
-</body>
-</html>
+        @if($errors->any())
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                @foreach($errors->all() as $error)
+                    Toastify({
+                        text: `<div class="flex items-center">
+                                <span>{{ $error }}</span>
+                                <svg class="w-6 h-6 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                              </div>`,
+                        duration: 5000,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "center", // `left`, `center` or `right`
+                        backgroundColor: "linear-gradient(to right, #e53e3e, #c53030)",
+                        className: "error-toast",
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        escapeMarkup: false, // Allows HTML in the toast
+                        style: {
+                            background: "linear-gradient(to right, #e53e3e, #c53030)",
+                            borderRadius: "8px",
+                            boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+                            padding: "12px 20px",
+                            fontSize: "16px",
+                            fontWeight: "bold",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            direction: "rtl",
+                            animation: "slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
+                        }
+                    }).showToast();
+                @endforeach
+            });
+        </script>
+        @endif
+    </x-slot>
+</x-layout>

@@ -92,6 +92,96 @@ class AlakhotahJoinRequestResource extends Resource
             ]);
     }
 
+	public static function form(Form $form): Form
+	{
+		return $form
+			->schema([
+				Forms\Components\Section::make('المعلومات الشخصية')
+					->columns(2)
+					->schema([
+						Forms\Components\TextInput::make('name')
+							->label('الاسم')
+							->required(),
+						Forms\Components\TextInput::make('email')
+							->label('البريد الإلكتروني')
+							->email()
+							->required(),
+						Forms\Components\TextInput::make('mobile')
+							->label('رقم الجوال')
+							->required(),
+						Forms\Components\Select::make('gender')
+							->label('الجنس')
+							->options([
+								'male' => 'ذكر',
+								'female' => 'أنثى',
+							])
+							->required(),
+						Forms\Components\DatePicker::make('birth')
+							->label('تاريخ الميلاد')
+							->required(),
+						Forms\Components\Select::make('blood_type')
+							->label('فصيلة الدم')
+							->options([
+								'A+' => 'A+',
+								'A-' => 'A-',
+								'B+' => 'B+',
+								'B-' => 'B-',
+								'AB+' => 'AB+',
+								'AB-' => 'AB-',
+								'O+' => 'O+',
+								'O-' => 'O-',
+							])
+							->required(),
+						Forms\Components\TextInput::make('city')
+							->label('المدينة')
+							->required(),
+						Forms\Components\Select::make('uniform_size')
+							->label('مقاس الزي')
+							->options([
+								'S' => 'S',
+								'M' => 'M',
+								'L' => 'L',
+								'XL' => 'XL',
+								'XXL' => 'XXL',
+								'XXXL' => 'XXXL',
+							])
+							->required(),
+					]),
+
+				Forms\Components\Section::make('المعلومات التعليمية')
+					->columns(2)
+					->schema([
+						Forms\Components\TextInput::make('education')
+							->label('التعليم')
+							->required(),
+						Forms\Components\CheckboxList::make('languages')
+							->label('اللغات')
+							->options([
+								'arabic' => 'العربية',
+								'english' => 'الإنجليزية',
+								'french' => 'الفرنسية',
+								'other' => 'أخرى',
+							])
+							->required(),
+					]),
+
+				Forms\Components\Section::make('المستندات')
+					->columns(2)
+					->schema([
+						Forms\Components\FileUpload::make('personal_id_image')
+							->label('صورة الهوية الشخصية')
+							->disk('digitalocean')
+							->image()
+							->required(),
+						Forms\Components\FileUpload::make('cv_file')
+							->label('السيرة الذاتية')
+							->disk('digitalocean')
+							->acceptedFileTypes(['application/pdf'])
+							->required(),
+					]),
+			]);
+	}
+
     public static function table(Table $table): Table
     {
         return $table
@@ -115,6 +205,11 @@ class AlakhotahJoinRequestResource extends Resource
                     ->dateTime()
                     ->sortable(),
             ])
+            ->defaultSort('created_at', 'desc')
+            ->persistFiltersInSession()
+            ->persistSortInSession()
+            ->persistColumnSearchesInSession()
+            ->persistSearchInSession()
             ->filters([
                 Tables\Filters\Filter::make('created_at')
                     ->form([

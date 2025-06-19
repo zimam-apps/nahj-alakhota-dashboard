@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<x-layout>
+    <x-slot name="title">الرئيسية</x-slot>
 
-<head>
-    <base href="{{url('/')}}">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="{{url('/')}}/assets/images/logo.ico" type="image/x-icon">
-    <title>الرئيسية</title>
-    <link href="{{url('/')}}/assets/css/main.css" rel="stylesheet"/>
-    <style>
+    <x-slot name="styles">
+        <base href="{{url('/')}}">
+    </x-slot>
+
+    <x-slot name="additionalStyles">
         .about-section,
         .join-section,
         .contribution-section {
@@ -33,63 +30,9 @@
         .faqs-section {
             background: url("{{url('/')}}/assets/images/noise.svg");
         }
-    </style>
-</head>
+    </x-slot>
 
-<body>
-<header class="fixed left-0 right-0 z-20 top-0 px-4 h-[80px] md:h-[100px] sm:px-14 lg:px-20">
-    <div class="container-fluid h-full mx-auto py-3">
-        <div class="flex items-center h-full justify-between">
-            <!-- Logo -->
-            <div class="flex items-center">
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <!-- @click="toggleMenu" -->
-            <button class="list-button md:hidden text-gray-700 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="x-mark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-
-                <svg class="w-6 h-6 bars" fill="none" stroke="#fff" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-            <!-- Desktop Navigation -->
-            <nav data-v-c970699f="" class="header-nav hidden md:flex gap-x-6 space-x-reverse"></nav>
-            <div class="hidden md:flex gap-2">
-                <a href="{{route('join-request')}}" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
-                    تقديم طلب الإنضمام
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="fadeOut mobileNav md:hidden fixed w-full left-0 top-[50px] px-3 pt-6">
-            <div class="relative h-full rounded-xl bg-[#422b1d]/80 border-2 border-primary p-5 flex items-center justify-center flex-col">
-                <div
-                        class="nav-container flex items-center justify-center flex-col">
-                    <a href="/about" class="list_item text-lg block py-2 text-primary transition duration-300">
-                        <span class="block hover:-translate-x-1 transition"></span>
-                    </a>
-
-                </div>
-                <!--  -->
-                <div class="py-4"></div>
-                <div class="flex flex-wrap gap-2">
-                    <a href="{{route('join-request')}}" class="block py-2 btn-primary rounded-full px-5 text-primary2 transition duration-300">
-                        تقديم طلب الإنضمام
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- content -->
-<main class="relative w-100">
+    <x-slot name="headerTextColor">#fff</x-slot>
     <!-- hero section -->
     <section class="hero-section relative z-10 bg-[#A9C6BC]" style="background: linear-gradient(170.3deg,rgba(109, 71, 48, 0.5) -35.98%,#090300 104.41%),url({{url('/')}}/assets/images/hero-banner.png)">
         <div class="container">
@@ -397,12 +340,9 @@
             </p>
         </div>
     </div>
-</footer>
-
-<script src="{{url('/')}}/assets/js/script.js"></script>
-<script src="{{url('/')}}/assets/js/header.js"></script>
-<script src="{{url('/')}}/assets/js/navlinks.js"></script>
-
-</body>
-
-</html>
+    <x-slot name="scripts">
+        <script src="{{url('/')}}/assets/js/script.js"></script>
+        <script src="{{url('/')}}/assets/js/header.js"></script>
+        <script src="{{url('/')}}/assets/js/navlinks.js"></script>
+    </x-slot>
+</x-layout>
