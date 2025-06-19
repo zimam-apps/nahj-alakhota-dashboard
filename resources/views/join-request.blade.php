@@ -320,7 +320,7 @@
         </div>
     </section>
     <x-slot name="scripts">
-        <script src="{{url('/')}}/assets/js/header.js"></script>
+        <script src="{{url('/')}}/assets/js/headers.js"></script>
         <script src="{{url('/')}}/assets/js/join-form.js"></script>
         <!-- Toastify JS -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

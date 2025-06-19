@@ -342,7 +342,7 @@
     </div>
     <x-slot name="scripts">
         <script src="{{url('/')}}/assets/js/script.js"></script>
-        <script src="{{url('/')}}/assets/js/header.js"></script>
+        <script src="{{url('/')}}/assets/js/headers.js"></script>
         <script src="{{url('/')}}/assets/js/navlinks.js"></script>
     </x-slot>
 </x-layout>
