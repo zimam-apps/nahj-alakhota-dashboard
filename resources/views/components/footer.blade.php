@@ -1,4 +1,4 @@
-<footer data-v-19b56bd5="" class="py-8 bg-[#170F0A] border relative z-10">
+<footer data-v-19b56bd5="" class="py-8 bg-[#170F0A] relative z-10">
     <div class="mx-0 space-y-12 pt-6">
         <div class="block flex justify-center">
         </div>
